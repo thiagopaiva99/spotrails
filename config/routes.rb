@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'albums/show'
   devise_for :users
   
   authenticated :user do

@@ -1,7 +1,7 @@
 section.dashboard {
     div.albums {
         h2 {
-            margin-top: 48px;
+            // margin-top: 48px;
             margin-bottom: 48px;
         }
 
@@ -9,6 +9,7 @@ section.dashboard {
     }
 
     hr {
+        background: rgba(255, 255, 255, 0.2);
         height: 1px !important;
     }
 }

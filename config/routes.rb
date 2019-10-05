@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'artists/show'
   get 'categories/show'
   devise_for :users
   

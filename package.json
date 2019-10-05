@@ -2,6 +2,7 @@
   "name": "spotcode",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "@rails/webpacker": "3.5",
     "bulma": "0.7.2"
   },

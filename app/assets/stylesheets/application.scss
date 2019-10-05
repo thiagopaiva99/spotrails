@@ -2,6 +2,10 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "./**/*";
 
-main {
-    margin-top: 75px;
+html {
+    background: $dark;
+    
+    main {
+        margin-top: 75px;
+    }
 }

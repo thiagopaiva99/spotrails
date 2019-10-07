@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'favorites/index'
-  get 'favorites/create'
-  get 'favorites/destroy'
   devise_for :users
   
   authenticated :user do
@@ -10,6 +7,10 @@ Rails.application.routes.draw do
     resources :categories, only: :show
     resources :artists, only: :show
     resources :albums, only: :show
+    resources :songs, only: [] do
+      post "/favorite", to: "favorites#create", on: :member, defaults: { format: :js, favoritable_type: 'Song' }
+      delete "/favorite", to: "favorites#destroy", on: :member, defaults: { format: :js, favoritable_type: 'Song' }
+    end
   end
 
   unauthenticated :user do

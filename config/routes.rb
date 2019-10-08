@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   get 'recently_heards/create'
+  
   devise_for :users
   
   authenticated :user do
     root to: "dashboard#index", as: :authenticated_root
+    resources :recently_heards, only: :create
     resources :favorites, only: :index
     resources :search, only: [:index, :new], as: :searches
     resources :categories, only: :show
